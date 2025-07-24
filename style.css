@@ -163,9 +163,10 @@ body {
     color: #5a5a5a;
     line-height: 1.6;
 }
+
 /* Challage part */
 .trusted-badge {
-    display:none;
+    display: none;
     position: absolute;
     top: -130px;
     right: -120px;
@@ -183,8 +184,62 @@ body {
     /* display: block; */
     width: 100%;
     height: auto;
+}
+
+
+/* Latest deal */
+.flower-lover {
+    padding: 20px;
   }
   
+  .deal-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Card Styling */
+  .deal-card {
+    position: relative;
+    color: white;
+    height: 200px;
+    border-radius: 8px;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .deal-card a {
+    margin-top: 8px;
+    display: inline-block;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration:underline;
+    font-weight: bold;
+  }
+  
+  
+  /* Image URLs */
+  .bloom {
+    background-image: url('./assets/deal-bloom.png');
+  }
+  
+  .ana {
+    background-image: url('./assets/deal-ana.png');
+  }
+  
+  .zabo {
+    background-image: url('./assets/deal-zabo.png');
+  }
 
 /* Desktop Layout */
 @media (min-width: 992px) {
@@ -236,13 +291,44 @@ body {
         padding: 80px 64px;
         gap: 60px;
     }
-    
-    .lover-img, 
+
+    .lover-img,
     .review {
         flex: 1;
     }
 
     .trusted-badge {
         display: block;
+    }
+
+    /* Latest deal */
+    .deal-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 28px;
+        align-items: stretch;
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+      }
+    
+      .left-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        max-width: 367px;
+      }
+    
+      .left-column .deal-card {
+        flex: 1; /* Makes each card take 50% height */
+      }
+    
+      .deal-wrapper > .zabo {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 423px;
       }
 }
