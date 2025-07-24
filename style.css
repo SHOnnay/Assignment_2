@@ -163,6 +163,28 @@ body {
     color: #5a5a5a;
     line-height: 1.6;
 }
+/* Challage part */
+.trusted-badge {
+    display:none;
+    position: absolute;
+    top: -130px;
+    right: -120px;
+    max-width: 250px;
+    height: auto;
+    z-index: 1;
+}
+
+
+.lover-img {
+    position: relative;
+}
+
+.lover-img img {
+    /* display: block; */
+    width: 100%;
+    height: auto;
+  }
+  
 
 /* Desktop Layout */
 @media (min-width: 992px) {
@@ -215,7 +237,12 @@ body {
         gap: 60px;
     }
     
-    .lover-img, .review {
+    .lover-img, 
+    .review {
         flex: 1;
     }
+
+    .trusted-badge {
+        display: block;
+      }
 }
