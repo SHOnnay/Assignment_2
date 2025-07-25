@@ -90,7 +90,6 @@ body {
 }
 
 .plant-card {
-    background-color: #fff;
     border-radius: 8px;
     padding: 16px;
     text-align: center;
@@ -190,22 +189,22 @@ body {
 /* Latest deal */
 .flower-lover {
     padding: 20px;
-  }
-  
-  .deal-wrapper {
+}
+
+.deal-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  
-  .left-column {
+}
+
+.left-column {
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  
-  /* Card Styling */
-  .deal-card {
+}
+
+/* Card Styling */
+.deal-card {
     position: relative;
     color: white;
     height: 200px;
@@ -216,30 +215,84 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-  }
-  
-  .deal-card a {
+}
+
+.deal-card a {
     margin-top: 8px;
     display: inline-block;
     color: #fff;
     padding: 8px 16px;
-    text-decoration:underline;
+    text-decoration: underline;
     font-weight: bold;
-  }
-  
-  
-  /* Image URLs */
-  .bloom {
+}
+
+
+/* Image URLs */
+.bloom {
     background-image: url('./assets/deal-bloom.png');
-  }
-  
-  .ana {
+}
+
+.ana {
     background-image: url('./assets/deal-ana.png');
-  }
-  
-  .zabo {
+}
+
+.zabo {
     background-image: url('./assets/deal-zabo.png');
-  }
+}
+
+/* Join Section */
+.join {
+    background-image: url('./assets/news-letter-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.join p {
+    margin-bottom: 24px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.input-container {
+    display: flex;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 0;
+    gap: 0; 
+    border-radius: 6px;
+    overflow: hidden;
+    height: 50px;
+}
+
+/* Email input */
+.join input {
+    flex: 1;
+    padding: 0 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Subscribe button */
+.join button {
+    background-color: #E95A08;
+    color: white;
+    border: none;
+    padding: 0 16px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
 
 /* Desktop Layout */
 @media (min-width: 992px) {
@@ -283,6 +336,14 @@ body {
         grid-template-columns: repeat(4, 1fr);
     }
 
+    .plant-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
     /* Flower lover */
     .flower-lover {
         flex-direction: row;
@@ -310,25 +371,70 @@ body {
         width: 100%;
         max-width: 1140px;
         margin: 0 auto;
-      }
-    
-      .left-column {
+    }
+
+    .left-column {
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 28px;
         max-width: 367px;
-      }
-    
-      .left-column .deal-card {
-        flex: 1; /* Makes each card take 50% height */
-      }
-    
-      .deal-wrapper > .zabo {
+    }
+
+    .left-column .deal-card {
+        flex: 1;
+        /* Makes each card take 50% height */
+    }
+
+    .deal-wrapper>.zabo {
         flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         height: 423px;
-      }
+    }
+
+    /* Join Section */
+    .join {
+        padding: 100px 20px;
+        text-align: center;
+    }
+
+    .join p {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    .input-container {
+        display: flex;
+        max-width: 500px;
+        margin: 0 auto;
+        gap: 0; 
+        border-radius: 8px;
+        overflow: hidden; 
+        height: 56px;
+    }
+
+    .join input {
+        flex: 1;
+        padding: 0 16px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .join button {
+        background-color: #E95A08;
+        color: white;
+        border: none;
+        padding: 0 24px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        height: 100%;
+        box-sizing: border-box;
+    }
 }
