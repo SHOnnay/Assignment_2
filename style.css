@@ -57,7 +57,6 @@ body {
 /*--- plants ---*/
 .plants-section {
     padding: 60px 20px;
-    background-color: #f9f9f9;
 }
 
 .plants-header {
@@ -79,7 +78,7 @@ body {
 
 .plants-header p {
     font-size: 14px;
-    color: #555;
+    color: rgba(0, 0, 0, 0.5);
     line-height: 1.5;
 }
 
@@ -122,14 +121,7 @@ body {
     width: 100%;
     border-radius: 4px;
     font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
 }
-
-.plant-card button:hover {
-    background-color: #E95A08;
-}
-
 
 /* Flower lover */
 .flower-lover {
@@ -180,13 +172,17 @@ body {
 }
 
 .lover-img img {
-    /* display: block; */
     width: 100%;
     height: auto;
 }
 
 
 /* Latest deal */
+.latest-deal-container {
+    margin: 20px auto;
+    padding: 20px;
+}
+
 .flower-lover {
     padding: 20px;
 }
@@ -262,7 +258,7 @@ body {
     max-width: 320px;
     margin: 0 auto;
     padding: 0;
-    gap: 0; 
+    gap: 0;
     border-radius: 6px;
     overflow: hidden;
     height: 50px;
@@ -292,8 +288,59 @@ body {
     box-sizing: border-box;
 }
 
+/* Footer Section */
 
 
+/* Logo and description */
+.f1 img {
+    margin-top: 20px;
+    width: 120px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.f1 p {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    max-width: 250px;
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+/* f2 and f3 links */
+.f2 ul,
+.f3 ul {
+    margin-left: 20px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.f2 a,
+.f3 a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+/* f4 icons */
+.f4 {
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    gap: 30px;
+}
+
+.f4 img {
+    margin-top: 20px;
+    width: 25px;
+    height: 25px;
+}
+
+
+/* #################### */
 /* Desktop Layout */
 @media (min-width: 992px) {
 
@@ -331,7 +378,7 @@ body {
         align-self: flex-start;
     }
 
-    /* Plans */
+    /* Plants */
     .plant-grid {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -363,46 +410,51 @@ body {
     }
 
     /* Latest deal */
+    .latest-deal-container {
+        padding: 40px;
+        max-height: 500px;
+    }
+
     .deal-wrapper {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "bloom zabo"
+            "ana   zabo";
         gap: 28px;
-        align-items: stretch;
         width: 100%;
-        max-width: 1140px;
-        margin: 0 auto;
+        margin: 0;
+        padding: 0;
     }
 
     .left-column {
-        flex: 1;
         display: flex;
         flex-direction: column;
         gap: 28px;
-        max-width: 367px;
     }
 
-    .left-column .deal-card {
-        flex: 1;
-        /* Makes each card take 50% height */
-    }
-
-    .deal-wrapper>.zabo {
-        flex: 1;
+    .deal-wrapper .zabo {
+        grid-row: span 2;
+        height: auto;
+        max-height: 423px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        height: 423px;
     }
 
     /* Join Section */
     .join {
+        margin-top: 0;
         padding: 100px 20px;
         text-align: center;
+        height: 550px;
     }
 
     .join p {
         font-size: 28px;
         font-weight: 600;
+        margin-top: 80px;
         margin-bottom: 24px;
     }
 
@@ -410,9 +462,9 @@ body {
         display: flex;
         max-width: 500px;
         margin: 0 auto;
-        gap: 0; 
+        gap: 0;
         border-radius: 8px;
-        overflow: hidden; 
+        overflow: hidden;
         height: 56px;
     }
 
@@ -436,5 +488,17 @@ body {
         cursor: pointer;
         height: 100%;
         box-sizing: border-box;
+    }
+
+    /* Footer */
+    .footer {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "f1 f2 f3 f4";
+        text-align: left;
+        padding: 60px 80px;
+        align-items: start;
+        column-gap: 40px;
     }
 }
